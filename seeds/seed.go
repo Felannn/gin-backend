@@ -17,7 +17,7 @@ func main() {
 			Category:    "Material Bangunan",
 			Stock:       50,
 			Description: "Semen untuk kebutuhan konstruksi bangunan",
-			ImageURL:    "https://example.com/semen-portland.jpg",
+			ImageURL:    "https://i.ibb.co.com/RGydW7xr/1695101264pcc-description.webp",
 		},
 		{
 			Name:        "Pasir Halus",
@@ -25,7 +25,7 @@ func main() {
 			Category:    "Material Bangunan",
 			Stock:       20,
 			Description: "Pasir halus untuk campuran plester dan cor",
-			ImageURL:    "https://example.com/pasir-halus.jpg",
+			ImageURL:    "https://i.ibb.co.com/zWVrxdM2/432782f9d13f1a8cec4fe29761148dd6.jpg",
 		},
 		{
 			Name:        "Batu Bata Merah",
@@ -33,7 +33,7 @@ func main() {
 			Category:    "Material Bangunan",
 			Stock:       500,
 			Description: "Batu bata merah untuk dinding bangunan",
-			ImageURL:    "https://example.com/batu-bata.jpg",
+			ImageURL:    "https://i.ibb.co.com/Xk3z37mQ/2c5049ea-3537-48f6-8965-ac7421fd56caw.webp",
 		},
 		{
 			Name:        "Besi Beton 10mm",
@@ -41,7 +41,7 @@ func main() {
 			Category:    "Logam",
 			Stock:       100,
 			Description: "Besi beton untuk tulangan konstruksi",
-			ImageURL:    "https://example.com/besi-beton.jpg",
+			ImageURL:    "https://i.ibb.co.com/4wZRmDVZ/f8qnl-LCw-Ez-SAu-Zt-Gd-Xpw3-FZ88-SOBF1-Mj.webp",
 		},
 		{
 			Name:        "Triplek 9mm",
@@ -49,7 +49,7 @@ func main() {
 			Category:    "Kayu",
 			Stock:       40,
 			Description: "Papan triplek untuk furniture dan konstruksi",
-			ImageURL:    "https://example.com/triplek.jpg",
+			ImageURL:    "https://i.ibb.co.com/kgF5JLKZ/da2e2c67-4451-4391-aa72-f20e6e64b2c6.jpg",
 		},
 		{
 			Name:        "Cat Tembok Putih",
@@ -57,7 +57,7 @@ func main() {
 			Category:    "Finishing",
 			Stock:       25,
 			Description: "Cat tembok interior warna putih",
-			ImageURL:    "https://example.com/cat-putih.jpg",
+			ImageURL:    "https://i.ibb.co.com/S4mgXBWX/product-2024-decolith-1000px-c.jpg",
 		},
 		{
 			Name:        "Keramik Lantai",
@@ -65,7 +65,7 @@ func main() {
 			Category:    "Finishing",
 			Stock:       80,
 			Description: "Keramik lantai ukuran 40x40 cm",
-			ImageURL:    "https://example.com/keramik.jpg",
+			ImageURL:    "https://i.ibb.co.com/HfXDFDnW/1006-keramik-1.jpg",
 		},
 		{
 			Name:        "Pipa PVC 3 Inch",
@@ -73,7 +73,7 @@ func main() {
 			Category:    "Plumbing",
 			Stock:       60,
 			Description: "Pipa PVC untuk saluran air",
-			ImageURL:    "https://example.com/pipa-pvc.jpg",
+			ImageURL:    "https://i.ibb.co.com/PGX5h7fQ/0b980392126f792ec95d194ce21ea8.jpg",
 		},
 		{
 			Name:        "Kabel Listrik NYA",
@@ -81,7 +81,7 @@ func main() {
 			Category:    "Elektrikal",
 			Stock:       30,
 			Description: "Kabel listrik untuk instalasi rumah",
-			ImageURL:    "https://example.com/kabel-listrik.jpg",
+			ImageURL:    "https://i.ibb.co.com/pjW4DvN7/8-NYA-Multi-Kabel.jpg",
 		},
 		{
 			Name:        "Baut Baja",
@@ -89,7 +89,7 @@ func main() {
 			Category:    "Hardware",
 			Stock:       1000,
 			Description: "Baut baja ukuran standar",
-			ImageURL:    "https://example.com/baut-baja.jpg",
+			ImageURL:    "https://i.ibb.co.com/V02Dqknc/727d5207-cf49-4029-959c-abbac41ec8bb.webp",
 		},
 	}
 	for _, p := range products {
