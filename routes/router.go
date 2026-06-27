@@ -23,6 +23,7 @@ func SetupRouter() *gin.Engine {
 	authHandler := handlers.NewAuthHandler()
 	productHandler := handlers.NewProductHandler()
 	cartHandler := handlers.NewCartHandler()
+	txHandler := handlers.NewTransactionHandler()
 
 	v1 := r.Group("/v1")
 	{
@@ -61,6 +62,12 @@ func SetupRouter() *gin.Engine {
 			cart.PUT("/quantity", cartHandler.UpdateQuantity)
 			cart.DELETE("/:product_id", cartHandler.RemoveItem)
 			cart.DELETE("", cartHandler.ClearCart)
+		}
+
+		transactions := protected.Group("/transactions")
+		{
+			transactions.POST("/checkout", txHandler.Checkout)
+			transactions.GET("", txHandler.GetTransactions)
 		}
 	}
 	}
