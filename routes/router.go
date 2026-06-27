@@ -22,6 +22,7 @@ func SetupRouter() *gin.Engine {
 
 	authHandler := handlers.NewAuthHandler()
 	productHandler := handlers.NewProductHandler()
+	cartHandler := handlers.NewCartHandler()
 
 	v1 := r.Group("/v1")
 	{
@@ -40,19 +41,28 @@ func SetupRouter() *gin.Engine {
 	protected.Use(middleware.AuthMiddleware())
 	{
 		products := protected.Group("/products")
-	{
+		{
 			products.GET("", productHandler.GetAll) 
 			products.GET("/:id", productHandler.GetByID) 
 		
 			adminProducts := products.Group("")
 			adminProducts.Use(middleware.AdminOnly())
-				{
-					adminProducts.POST("", productHandler.Create) 
-					adminProducts.PUT("/:id", productHandler.Update) 
-					adminProducts.DELETE("/:id", productHandler.Delete)
-				}
+			{
+				adminProducts.POST("", productHandler.Create) 
+				adminProducts.PUT("/:id", productHandler.Update) 
+				adminProducts.DELETE("/:id", productHandler.Delete)
 			}
 		}
+
+		cart := protected.Group("/cart")
+		{
+			cart.GET("", cartHandler.GetCart)
+			cart.POST("", cartHandler.AddToCart)
+			cart.PUT("/quantity", cartHandler.UpdateQuantity)
+			cart.DELETE("/:product_id", cartHandler.RemoveItem)
+			cart.DELETE("", cartHandler.ClearCart)
+		}
+	}
 	}
 	return r
 }
