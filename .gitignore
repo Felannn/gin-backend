@@ -1,0 +1,4 @@
+firebase_service_account.json
+.env
+.env.*
+!.env.example
