@@ -49,13 +49,18 @@ func (s *TransactionService) Checkout(userID uint, paymentMethod string) (*model
 	// 3. Generate transaction number
 	txNum := fmt.Sprintf("TRX-%d", time.Now().UnixMilli())
 
+	status := "Selesai"
+	if paymentMethod == "Wallet Ku" {
+		status = "Menunggu Pembayaran"
+	}
+
 	// 4. Create transaction struct
 	tx := &models.Transaction{
 		UserID:            userID,
 		TransactionNumber: txNum,
 		TotalAmount:       totalAmount,
 		PaymentMethod:     paymentMethod,
-		Status:            "Selesai",
+		Status:            status,
 		Items:             txItems,
 	}
 

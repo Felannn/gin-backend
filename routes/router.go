@@ -32,6 +32,8 @@ func SetupRouter() *gin.Engine {
 			c.JSON(200, gin.H{"status": "ok", "service": "gin"})
 		})
 
+		v1.GET("/transactions/callback", txHandler.Callback)
+
 	
 	auth := v1.Group("/auth")
 	{
